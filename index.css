@@ -1,71 +1,99 @@
 body {
-    margin: 0;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
-  
-  #globeCanvas {
-    height: 100vh;
-  }
+  margin: 0;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 
+#globeCanvas {
+  height: 100vh;
+}
+
+.container {
+  position: relative;
+  background-color: #040d21;
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.background-lights {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.credits {
+  font-family: monospace;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  z-index: 20;
+  color: #aaa;
+  padding: .5rem 1rem 1rem 1rem;
+}
+
+.contact-info {
+  font-family: monospace;
+  position: static;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  align-content: center;
+  justify-content: center;
+  z-index: 20;
+  background-color: rgba(0, 0, 0, .3);
+  color: #aaa;
+  padding: .5rem 1rem 1rem 1rem;
+}
+
+a {
+  color: #fff;
+}
+
+.githublogo {
+  filter: brightness(100);
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
   .container {
-    position: relative;
-    background-color: #040d21;
-    position: relative;
-    z-index: 10;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .background-lights {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 200%;
-    transform: translate(-50%, -50%);
-    z-index: -1;
-  }
-  
-  .credits{
-    font-family: monospace;
-    position: absolute;
-    bottom: 5px;
-    right: 5px;
-    display: flex;
     flex-direction: column;
-    text-align: center;
-    align-content: center;
-    justify-content: center;
-    z-index: 20;
-    color: #aaa;
-    padding: .5rem 1rem 1rem 1rem;
+    padding: 1rem;
   }
 
-  .contact-info{
-    font-family: monospace;
+  .background-lights {
+    display: none;
+  }
+
+  .credits{
+    display: none;
+  }
+  .contact-info {
     position: static;
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    align-content: center;
-    justify-content: center;
-    z-index: 20;
-    background-color: rgba(0,0,0,.3);
-    color: #aaa;
-    padding: .5rem 1rem 1rem 1rem;
+    padding: 1rem;
+    text-align: center;
   }
-  
-  a{
-    color: #fff;
-  }
-  
-  .githublogo{
-    filter: brightness(100);
-  }
-  
+}
+
+@media screen and (max-width: 480px) {
+  /**/
+}
+
+@media screen and (max-width: 320px) {
+  /* */
+}
